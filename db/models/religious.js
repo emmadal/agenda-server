@@ -5,6 +5,7 @@ const religiousSchema = mongoose.Schema({
   hour: String,
   expiration_date: String,
   place: String,
+  categories: String,
   date: String,
   cover: {
     filename: String,

@@ -4,6 +4,7 @@ const enterpriseSchema = mongoose.Schema({
   title: String,
   hour: String,
   place: String,
+  categories: String,
   date: String,
   expiration_date: String,
   cover: {

@@ -16,6 +16,7 @@ export const typeDefs = gql`
 
   type Religious {
     id: ID
+    categories: String!
     title: String!
     hour: String!
     place: String!
@@ -27,6 +28,7 @@ export const typeDefs = gql`
   type Enterprise {
     id: ID
     expiration_date: String!
+    categories: String!
     title: String!
     hour: String!
     place: String!
@@ -37,6 +39,7 @@ export const typeDefs = gql`
   type Party {
     id: ID
     expiration_date: String!
+    categories: String!
     title: String!
     hour: String!
     place: String!
@@ -47,6 +50,7 @@ export const typeDefs = gql`
   type Society {
     id: ID
     expiration_date: String!
+    categories: String!
     title: String!
     hour: String!
     place: String!
@@ -62,6 +66,7 @@ export const typeDefs = gql`
 
   input EventReligious {
     title: String!
+    categories: String!
     hour: String!
     place: String!
     date: String!
@@ -71,6 +76,7 @@ export const typeDefs = gql`
 
   input EventEnterprise {
     title: String!
+    categories: String!
     hour: String!
     place: String!
     date: String!
@@ -80,6 +86,7 @@ export const typeDefs = gql`
 
   input EventParty {
     title: String!
+    categories: String!
     hour: String!
     place: String!
     date: String!
@@ -89,6 +96,7 @@ export const typeDefs = gql`
 
   input EventSociety {
     title: String!
+    categories: String!
     hour: String!
     place: String!
     date: String!

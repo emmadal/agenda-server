@@ -5,6 +5,7 @@ const societySchema = mongoose.Schema({
   hour: String,
   place: String,
   expiration_date: String,
+  categories: String,
   date: String,
   cover: {
     filename: String,
