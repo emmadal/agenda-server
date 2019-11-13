@@ -9,7 +9,11 @@ export const resolvers = {
     eventReligious: () => religious.find().sort({ name: 1 }),
     eventEnterprise: () => enterprise.find().sort({ name: 1 }),
     eventParty: () => party.find().sort({ name: 1 }),
-    eventSociety: () => society.find().sort({ name: 1 })
+    eventSociety: () => society.find().sort({ name: 1 }),
+    oneReligious: (_, { id }) => religious.findById(id),
+    oneEnterprise: (_, { id }) => enterprise.findById(id),
+    oneSociety: (_, { id }) => society.findById(id),
+    oneParty: (_, { id }) => party.findById(id)
   },
 
   Mutation: {
@@ -24,6 +28,6 @@ export const resolvers = {
     },
     addEventParty: (_, { input }) => {
       return party(input).save();
-    },
+    }
   }
 };

@@ -6,6 +6,10 @@ export const typeDefs = gql`
     eventEnterprise: [Enterprise]!
     eventParty: [Party]!
     eventSociety: [Society]!
+    oneReligious(id: ID!): Religious!
+    oneEnterprise(id: String!): Enterprise!
+    oneSociety(id: String!): Society!
+    oneParty(id: String!): Party!
   }
 
   type File {
@@ -108,5 +112,9 @@ export const typeDefs = gql`
     addEventEnterprise(input: EventEnterprise): Enterprise!
     addEventParty(input: EventParty): Party!
     addEventSociety(input: EventSociety): Society!
+    delEventReligious(id: ID!): [Religious]!
+    delEventEnterprise(id: ID!): [Enterprise]!
+    delEventEventParty(id: ID!): [Party]!
+    delEventSociety(id: ID!): [Society]!
   }
 `;
