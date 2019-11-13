@@ -6,12 +6,11 @@ const enterpriseSchema = mongoose.Schema({
   place: String,
   categories: String,
   date: String,
-  expiration_date: String,
-  cover: {
-    filename: String,
-    mimetype: String,
-    encoding: String
-  }
+  // cover: {
+  //   filename: String,
+  //   mimetype: String,
+  //   encoding: String
+  // }
 });
 
 export const enterpriseModel = mongoose.model("Enterprise", enterpriseSchema);

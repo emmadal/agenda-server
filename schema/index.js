@@ -8,7 +8,7 @@ export const typeDefs = gql`
     eventSociety: [Society]!
   }
 
-  type Cover {
+  type File {
     filename: String!
     mimetype: String!
     encoding: String!
@@ -21,48 +21,44 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    expiration_date: String!
-    cover: Cover!
+    # cover: File!
   }
 
   type Enterprise {
     id: ID
-    expiration_date: String!
     categories: Categories!
     title: String!
     hour: String!
     place: String!
     date: String!
-    cover: Cover!
+    # cover: File!
   }
 
   type Party {
     id: ID
-    expiration_date: String!
     categories: Categories!
     title: String!
     hour: String!
     place: String!
     date: String!
-    cover: Cover!
+    # cover: File!
   }
 
   type Society {
     id: ID
-    expiration_date: String!
     categories: Categories!
     title: String!
     hour: String!
     place: String!
     date: String!
-    cover: Cover!
+    # cover: File!
   }
 
   enum Categories{
-    RELIGIOUS
-    ENTERPRISE
-    PARTY
-    SOCIETY
+    Religieux
+    Entreprise
+    Divertissement
+    Societe
   }
 
   input EventCover {
@@ -77,8 +73,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    expiration_date: String!
-    cover: EventCover!
+    # cover: EventCover!
   }
 
   input EventEnterprise {
@@ -87,8 +82,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    expiration_date: String!
-    cover: EventCover!
+    # cover: EventCover!
   }
 
   input EventParty {
@@ -97,8 +91,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    expiration_date: String!
-    cover: EventCover!
+    # cover: EventCover!
   }
 
   input EventSociety {
@@ -107,8 +100,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    expiration_date: String!
-    cover: EventCover!
+    # cover: EventCover!
   }
 
   type Mutation {
