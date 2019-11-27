@@ -10,7 +10,7 @@ const dbConnect = async url => {
   try {
     await mongoose.connect(url, {
       useNewUrlParser: true,
-      useUnifiedTopology: true //used for Mongo Atlas instead of local database
+     // useUnifiedTopology: true //used for Mongo Atlas instead of local database
     });
     console.log("connected to database");
   } catch (error) {

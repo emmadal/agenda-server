@@ -6,11 +6,11 @@ const societySchema = mongoose.Schema({
   place: String,
   categories: String,
   date: String,
-  // cover: {
-  //   filename: String,
-  //   mimetype: String,
-  //   encoding: String
-  // }
+  cover: {
+    filename: String,
+    mimetype: String,
+    encoding: String
+  }
 });
 
-export const societyModel = mongoose.model("Society", societySchema);
+export const societyModel = mongoose.model("Societe", societySchema);

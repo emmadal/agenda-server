@@ -25,7 +25,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    # cover: File!
+    cover: File!
   }
 
   type Enterprise {
@@ -35,7 +35,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    # cover: File!
+    cover: File!
   }
 
   type Party {
@@ -45,7 +45,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    # cover: File!
+    cover: File!
   }
 
   type Society {
@@ -55,7 +55,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    # cover: File!
+    cover: File!
   }
 
   enum Categories{
@@ -65,19 +65,13 @@ export const typeDefs = gql`
     Societe
   }
 
-  input EventCover {
-    filename: String!
-    mimetype: String!
-    encoding: String!
-  }
-
   input EventReligious {
     title: String!
     categories: Categories!
     hour: String!
     place: String!
     date: String!
-    # cover: EventCover!
+    cover: Upload!
   }
 
   input EventEnterprise {
@@ -86,7 +80,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    # cover: EventCover!
+    cover: Upload!
   }
 
   input EventParty {
@@ -95,7 +89,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    # cover: EventCover!
+    cover: Upload!
   }
 
   input EventSociety {
@@ -104,7 +98,7 @@ export const typeDefs = gql`
     hour: String!
     place: String!
     date: String!
-    # cover: EventCover!
+    cover: Upload!
   }
 
   type Mutation {
