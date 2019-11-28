@@ -19,7 +19,7 @@ export const typeDefs = gql`
   }
 
   type Religious {
-    id: ID
+    id: ID!
     categories: Categories!
     title: String!
     hour: String!
@@ -58,7 +58,7 @@ export const typeDefs = gql`
     cover: File!
   }
 
-  enum Categories{
+  enum Categories {
     Religieux
     Entreprise
     Divertissement
@@ -108,7 +108,11 @@ export const typeDefs = gql`
     addEventSociety(input: EventSociety): Society!
     delEventReligious(id: ID!): [Religious]!
     delEventEnterprise(id: ID!): [Enterprise]!
-    delEventEventParty(id: ID!): [Party]!
+    delEventParty(id: ID!): [Party]!
     delEventSociety(id: ID!): [Society]!
+    updateEventReligious(id: ID!, input: EventReligious): [Religious]!
+    updateEventEnterprise(id: ID!, input: EventEnterprise): [Enterprise]!
+    updateEventParty(id: ID!, input: EventParty): [Party]!
+    updateEventSociety(id: ID!, input: EventSociety): [Society]!
   }
 `;

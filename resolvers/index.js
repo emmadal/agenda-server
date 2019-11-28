@@ -29,7 +29,7 @@ export const resolvers = {
     addEventParty: (_, { input }) => {
       return party(input).save();
     },
-     delEventReligious: async (_, { id }) => {
+    delEventReligious: async (_, { id }) => {
       await religious.deleteOne({ _id: id });
       return religious.find().sort({ date: -1 });
     },
@@ -37,13 +37,45 @@ export const resolvers = {
       await enterprise.deleteOne({ _id: id });
       return enterprise.find().sort({ date: -1 });
     },
-    delEventEventParty: async (_, { id }) => {
+    delEventParty: async (_, { id }) => {
       await party.deleteOne({ _id: id });
       return party.find().sort({ date: -1 });
     },
     delEventSociety: async (_, { id }) => {
       await society.deleteOne({ _id: id });
       return society.find().sort({ date: -1 });
+    },
+    updateEventReligious: async (_, { id, input }) => {
+      try {
+        await religious.updateOne({ _id: id }, { $set: input }, { new: true });
+        return religious.find().sort({ date: -1 });
+      } catch (error) {
+        throw error;
+      }
+    },
+    updateEventEnterprise: async (_, { id, input }) => {
+      try {
+        await enterprise.updateOne({ _id: id }, { $set: input }, { new: true });
+        return enterprise.find().sort({ date: -1 });
+      } catch (error) {
+        throw error;
+      }
+    },
+    updateEventSociety: async (_, { id, input }) => {
+      try {
+        await society.updateOne({ _id: id }, { $set: input }, { new: true });
+        return society.find().sort({ date: -1 });
+      } catch (error) {
+        throw error;
+      }
+    },
+    updateEventParty: async (_, { id, input }) => {
+      try {
+        await party.updateOne({ _id: id }, { $set: input }, { new: true });
+        return party.find().sort({ date: -1 });
+      } catch (error) {
+        throw error;
+      }
     },
   }
 };
