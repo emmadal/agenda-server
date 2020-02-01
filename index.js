@@ -19,7 +19,7 @@ const dbConnect = async url => {
 };
 
 // starting our GraphQL server...
-app.listen().then(({url}) => {
+app.listen({port: process.env.PORT || 4000}).then(({url}) => {
     dbConnect("mongodb+srv://emmadal:reactjs2019@agenda-cluster-ruxrq.mongodb.net/agenda");
     console.log(`GraphQL server started at ${url}`);
 });
