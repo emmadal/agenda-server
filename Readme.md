@@ -1,4 +1,4 @@
-# GraphQL Server + MongoDB Database 
+# GraphQL Server + MongoDB Database
 
 this is a GraphQL Server deployed on heroku for my own test.
 
