@@ -14,7 +14,7 @@ const dbConnect = async url => {
         });
         console.log("connected to database");
     } catch (error) {
-        console.error("Database not available. Please ensure you that the mongod.service is enable.");
+        console.error("Database not available. Please ensure you that the mongod.service is enable or verify your connection internet.");
     }
 };
 
