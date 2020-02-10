@@ -6,7 +6,7 @@
   "author": "emmadal",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon -r esm index.js",
+    "start": "nodemon -r esm index.js"
   },
   "dependencies": {
     "apollo-server": "^2.9.7",
