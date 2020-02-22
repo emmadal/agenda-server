@@ -10,7 +10,7 @@ const dbConnect = async url => {
     try {
         await mongoose.connect(url, {
             useNewUrlParser: true,
-           // useUnifiedTopology: true // used for Mongo Atlas instead of local database
+            useUnifiedTopology: true // used for Mongo Atlas instead of local database
         });
         console.log("connected to database");
     } catch (error) {
@@ -20,8 +20,8 @@ const dbConnect = async url => {
 
 // starting our GraphQL server...
 app.listen({port: process.env.PORT || 4000}).then(({url}) => {
-    // dbConnect("mongodb+srv://emmadal:reactjs2019@agenda-cluster-ruxrq.mongodb.net/agenda?retryWrites=true&w=majority");
-    dbConnect("mongodb://localhost:27017/agenda");
+    dbConnect("mongodb+srv://emmadal:reactjs2019@agenda-cluster-ruxrq.mongodb.net/agenda?retryWrites=true&w=majority");
+    //dbConnect("mongodb://localhost:27017/agenda");
     console.log(`GraphQL server started at ${url}`);
 });
 
