@@ -29,6 +29,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: File!
   }
 
@@ -39,6 +41,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: File!
   }
 
@@ -49,6 +53,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: File!
   }
 
@@ -59,6 +65,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: File!
   }
 
@@ -69,6 +77,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: File!
   }
 
@@ -79,6 +89,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: File!
   }
 
@@ -98,6 +110,8 @@ export const typeDefs = gql `
     place: String!
     date: String!
     cover: Upload!
+    infoline: String!
+    description: String!
   }
 
   input EventPolitic {
@@ -107,6 +121,8 @@ export const typeDefs = gql `
     place: String!
     date: String!
     cover: Upload!
+    infoline: String!
+    description: String!
   }
 
   input EventSport {
@@ -115,6 +131,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: Upload!
   }
 
@@ -123,6 +141,8 @@ export const typeDefs = gql `
     categories: Categories!
     hour: String!
     place: String!
+    infoline: String!
+    description: String!
     date: String!
     cover: Upload
   }
@@ -133,6 +153,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: Upload!
   }
 
@@ -142,6 +164,8 @@ export const typeDefs = gql `
     hour: String!
     place: String!
     date: String!
+    infoline: String!
+    description: String!
     cover: Upload!
   }
 
@@ -166,7 +190,5 @@ export const typeDefs = gql `
     updateEventSociety(id: ID!, input: EventSociety): [Society]!
     updateEventPolitic(id: ID!, input: EventPolitic): [Politics]!
     updateEventSport(id: ID!, input: EventSport): [Sport]!
-
-
   }
 `;

@@ -5,6 +5,8 @@ const politicSchema = mongoose.Schema({
   hour: String,
   place: String,
   categories: String,
+  infoline: String,
+  description: String,
   date: String,
   cover: {
     filename: String,
